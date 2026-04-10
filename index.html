@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusSync | Premium Dashboard</title>
+  <meta name="description" content="Next-Gen Venue Sync Dashboard">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <i class="ph-fill ph-broadcast logo-icon-main"></i>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-item active" title="Dashboard"><i class="ph ph-squares-four"></i></a>
+      <a href="#" class="nav-item" title="Schedules"><i class="ph ph-calendar-check"></i></a>
+      <a href="#" class="nav-item" title="Facilities"><i class="ph ph-coffee"></i></a>
+      <a href="#" class="nav-item" title="Security"><i class="ph ph-shield-check"></i></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item" title="Settings"><i class="ph ph-gear"></i></a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="app-wrapper">
+    <header>
+      <div class="header-left">
+        <h1 class="page-title">Venue Control Center</h1>
+        <p class="page-subtitle">Grand Stadium Arena • Real-Time Metrics</p>
+      </div>
+      
+      <div class="header-status">
+        <div class="live-indicator">
+          <div class="pulse-dot"></div>
+          LIVE SYNC
+        </div>
+        <div class="clock-display">
+          <i class="ph ph-clock"></i>
+          <span id="clock">--:--:--</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Top Metrics Banner -->
+      <section class="metrics-banner animate-fade-in">
+        <div class="metric-card">
+          <div class="metric-icon bg-cyan"><i class="ph ph-users"></i></div>
+          <div class="metric-data">
+            <h4>Total Attendees</h4>
+            <h2>14,502 <span class="trend up"><i class="ph ph-trend-up"></i> 12%</span></h2>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon bg-purple"><i class="ph ph-ticket"></i></div>
+          <div class="metric-data">
+            <h4>Active Shows</h4>
+            <h2>4 <span class="trend neutral">Optimal</span></h2>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon bg-amber"><i class="ph ph-thermometer-hot"></i></div>
+          <div class="metric-data">
+            <h4>Venue Traffic</h4>
+            <h2>High <span class="trend down" style="color:var(--accent-amber)">Monitoring</span></h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Grid Layout -->
+      <div class="dashboard-grid">
+        <!-- Event Schedule Card -->
+        <section class="card animate-slide-up" style="animation-delay: 0.1s;">
+          <div class="glow"></div>
+          <div class="card-header">
+            <div class="card-title">
+              <i class="ph ph-film-strip card-icon" style="color: var(--accent-purple)"></i>
+              Movies & Live Events
+            </div>
+            <button class="icon-btn" aria-label="More options"><i class="ph ph-dots-three"></i></button>
+          </div>
+          <div class="event-list" id="events-list">
+            <!-- Rendered via JS -->
+          </div>
+        </section>
+
+        <!-- Food Court Wait Times Card -->
+        <section class="card animate-slide-up" style="animation-delay: 0.2s;">
+          <div class="glow glow-purple" style="top: auto; bottom: -50px; left: auto; right: -50px;"></div>
+          <div class="card-header">
+            <div class="card-title">
+              <i class="ph ph-coffee card-icon" style="color: var(--accent-yellow)"></i>
+              Food Court Intelligence
+            </div>
+            <button class="icon-btn" aria-label="Filter food courts"><i class="ph ph-funnel"></i></button>
+          </div>
+          <div class="service-grid" id="food-list">
+            <!-- Rendered via JS -->
+          </div>
+        </section>
+
+        <!-- Washroom Status Card -->
+        <section class="card animate-slide-up" style="animation-delay: 0.3s;">
+          <div class="glow" style="background: radial-gradient(circle, var(--accent-green) 0%, transparent 70%); top: -50px; left: -50px;"></div>
+          <div class="card-header">
+            <div class="card-title">
+              <i class="ph ph-toilet-paper card-icon" style="color: var(--accent-cyan)"></i>
+              Restroom Availability
+            </div>
+            <button class="icon-btn" aria-label="Expand view"><i class="ph ph-arrows-out-simple"></i></button>
+          </div>
+          <div class="service-grid" id="washroom-list">
+            <!-- Rendered via JS -->
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
